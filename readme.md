@@ -1,5 +1,9 @@
 # Hugo Remark theme
 
+This theme is based on the fantastic Hugo Remark theme by Sebastian Porto: https://github.com/sporto/hugo-remark
+
+The main change is an "index page" that supports multiple slideshows.  Each document in the "contents" directory is expected to be a single slideshow (separate slides with `---` as you would do in vanilla remark.js).  This makes it ideally suited to organizing and sharing course notes for a class.
+
 What is **hugo**?
 
 [Hugo](http://gohugo.io/) is a great static site generator built in Go.
@@ -40,30 +44,30 @@ cd /path/to/presentation
 Inside the presentation folder do:
 
 ```bash
-git clone https://github.com/sporto/hugo-remark themes/remark
+git clone https://github.com/jcausey-astate/hugo-remark-academic themes/remark-academic
 ```
 Add to config file
 ```
-theme = "remark"
+theme = "remark-academic"
 ```
 ### Generate new slides
 
 Inside the presentation folder do:
 
 ```bash
-hugo new 010.md
+hugo new 001_First_Day_Lecture.md
 ```
 
-Note that this theme will just put slides in alphabetic order by their __title__, so name them something like 010, 020, 030...
+Note that this theme will just put slide decks in alphabetic order by their __title__ on the index page, so name them accordingly.
 
 e.g.
 ```
 +++
-title = "010"
+title = "001 First Day Lecture"
 +++
 ```
 
-Slides will be created on `./content` subfolder.
+Slides will be created in the `./content` subfolder.
 Edit the slides using markdown.
 
 ### Serve the slideshow
@@ -71,7 +75,7 @@ Edit the slides using markdown.
 To show your slides run:
 
 ```bash
-hugo server --buildDrafts --watch
+hugo server --buildDrafts
 ```
 
 And open the given url in a browser, e.g. `http://localhost:1313`
@@ -104,5 +108,4 @@ You can also add custom JS on the footer, this is loaded after the remark initia
 - Create a file `./layouts/partials/custom_footer.html`
 - Link `custom_footer.html` in `footer.html` by adding `{{ partial "custom_footer.html" }}` to where you want.
 - Add a JS script link there or just write the JS using `script` tags
-
 
