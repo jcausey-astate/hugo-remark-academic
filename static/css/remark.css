@@ -110,6 +110,7 @@ body:fullscreen{
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   display: table-cell;
   font-size: 20px;
   padding: 1em 4em 1em 4em;
