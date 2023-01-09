@@ -62,9 +62,9 @@ Note that this theme will just put slide decks in alphabetic order by their __ti
 
 e.g.
 ```
-+++
+---
 title = "001 First Day Lecture"
-+++
+---
 ```
 
 Slides will be created in the `./content` subfolder.
