@@ -1,6 +1,6 @@
-# Hugo Remark theme
+# Hugo Remark "Academic" theme
 
-This theme is based on the fantastic Hugo Remark theme by Sebastian Porto: https://github.com/sporto/hugo-remark
+This theme is based on the fantastic Hugo Remark theme by Sebastian Porto: https://github.com/sporto/hugo-remark. That one is probably a better choice for most use-cases; I maintain this fork to customize some things to better fit my online lecture notes use-case and preferences.
 
 The main change is an "index page" that supports multiple slideshows.  Each document in the "contents" directory is expected to be a single slideshow (separate slides with `---` as you would do in vanilla remark.js).  This makes it ideally suited to organizing and sharing course notes for a class.
 
